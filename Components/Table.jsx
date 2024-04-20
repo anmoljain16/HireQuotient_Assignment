@@ -28,20 +28,10 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
     },
 }));
 
-function createData(name, calories, fat, carbs, protein) {
-    return { name, calories, fat, carbs, protein };
-}
 
-const rows = [
-    createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-    createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-    createData('Eclair', 262, 16.0, 24, 6.0),
-    createData('Cupcake', 305, 3.7, 67, 4.3),
-    createData('Gingerbread', 356, 16.0, 49, 3.9),
-];
+
 
 export default function CustomizedTables({data}) {
-    console.log(`Data - ${data}`)
     const keys = Object.keys(data[0]);
 
     return (
@@ -51,11 +41,9 @@ export default function CustomizedTables({data}) {
                     <TableRow>
                         {keys.map((key, index) => {
                             return (
-                                <StyledTableCell key={index}>{key}</StyledTableCell>
+                                <StyledTableCell key={index}>{key.toUpperCase()}</StyledTableCell>
                             )
                         })}
-
-                        {/*<StyledTableCell>Dessert (100g serving)</StyledTableCell>*/}
 
                     </TableRow>
                 </TableHead>
@@ -63,12 +51,13 @@ export default function CustomizedTables({data}) {
                     {data.map((row, rowIndex) => (
                         <StyledTableRow key={rowIndex}>
                             {keys.map((key, cellIndex) => (
-                                <StyledTableCell key={cellIndex} align="right">
+                                <StyledTableCell key={cellIndex} align="left">
                                     {row[key]} {/* Render cell data based on row[key] */}
                                 </StyledTableCell>
                             ))}
                         </StyledTableRow>
                     ))}
+
                 </TableBody>
             </Table>
         </TableContainer>

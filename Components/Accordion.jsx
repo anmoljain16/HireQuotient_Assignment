@@ -9,8 +9,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import CustomizedTables from "@/Components/Table";
 
 export default function AccordionExpandDefault({groupedData} ) {
-    // const{bond, equity, cash, fund, loan, realestate} = groupedData;
-    // console.log(Object.keys(groupedData).length)
+
     return (
         <div>
             {

@@ -25,7 +25,11 @@ export default async function Home() {
 
   return (
     <>
-    <AccordionExpandDefault groupedData={groupedData} />
+        <div className={"bg-slate-200 h-screen"}>
+            <div className={"container w-[93%] justify-self-center m-auto py-12"}>
+                <AccordionExpandDefault groupedData={groupedData}/>
+            </div>
+        </div>
     </>
   );
 }
