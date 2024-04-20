@@ -8,7 +8,7 @@ import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 
 
 export const metadata = {
-  title: "HireQuotient Assignment | Anmol Jain",
+  title: "HireQuotient | Anmol Jain",
   description: "Application that displays the holdings table | Anmol Jain",
 
 };
@@ -16,7 +16,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
       <html lang="en">
-      <body>
+      <body className={"bg-slate-200"}>
             <AppRouterCacheProvider>
         {children}
               </AppRouterCacheProvider>
