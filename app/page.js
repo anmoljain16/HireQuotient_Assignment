@@ -30,7 +30,7 @@ export default async function Home() {
         }
 
         // remove asset_class from the item
-        delete item.asset_class;
+        // delete item.asset_class;
 
         // push the item to the groupedData object
         groupedData[assetClass].push(item);
